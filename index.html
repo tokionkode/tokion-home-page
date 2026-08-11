@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOKION — Desarrollo Web & Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/tokion_style.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <span id="mensajeExito" class="mensaje-exito">
+    <strong>✓ Formulario enviado con éxito</strong>
+    <span>Pronto nos comunicaremos con usted.</span>
+  </span>
+
+  <!-- ============ NAV ============ -->
+  <header id="site-header">
+    <div class="wrap">
+      <nav>
+        <a href="#inicio" class="brand">
+          <img src="/logo.png" class="logo" alt="TOKION">
+          <span>TOKION</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="nav-cta notch-sm">SOLICITAR PRESUPUESTO</a>
+        <button class="burger" id="burger-btn" aria-label="Abrir menú">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="1.6" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-btn" id="close-menu" aria-label="Cerrar menú">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="1.6" />
+      </svg>
+    </button>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <canvas id="network-canvas"></canvas>
+    <div class="hero-glow"></div>
+    <div class="wrap hero-inner">
+      <div class="eyebrow">
+        <span class="chevron"><span></span><span></span></span>
+        TOKION · DESARROLLO WEB & SOFTWARE
+      </div>
+      <h1 class="hero-title">DESARROLLAMOS SOFTWARE<br>QUE <span class="accent">IMPULSA NEGOCIOS.</span></h1>
+      <p class="hero-sub">Creamos sitios web, sistemas y soluciones digitales escalables para empresas que necesitan
+        crecer con herramientas que funcionan de verdad.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary notch-sm">HABLEMOS →</a>
+        <a href="#proyectos" class="btn-secondary notch-sm">VER PROYECTOS</a>
+      </div>
+      <div class="hero-meta">
+        <div><span class="n">05</span><span class="l">Etapas de proceso</span></div>
+        <div><span class="n">100%</span><span class="l">A medida, tus ideas</span></div>
+        <div><span class="n">24/7</span><span class="l">Servivio de soporte post-lanzamiento</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="section" id="servicios">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="tag">Servicios</div>
+        <h2 class="section-title">Lo que construimos</h2>
+        <p class="section-desc">Del primer prototipo al sistema en producción.</p>
+      </div>
+      <div class="services-grid reveal">
+        <div class="service-card">
+          <span class="num">01</span>
+          <h3>Landing Pages</h3>
+          <p>Página diseñada para que el visitante haga una acción.</p>
+          <ul>
+            <li>Solicitar un presupuesto.</li>
+            <li>Agendar una reunión.</li>
+            <li>Comprar un producto.</li>
+            <li>Descargar un ebook.</li>
+            <li>Registrarse.</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <span class="num">02</span>
+          <h3>Sitios Corporativos</h3>
+          <p>Ideas y conceptos adaptados a tu necesidad.</p>
+          <ul>
+            <li>Inicio</li>
+            <li>Nosotros</li>
+            <li>Servicios</li>
+            <li>Portfolio</li>
+            <li>Clientes</li>
+            <li>Blog</li>
+            <li>Contacto</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <span class="num">03</span>
+          <h3>E-commerce</h3>
+          <p>Tu producto no termina en el lanzamiento. Lo mantenemos, seguro y actualizado.</p>
+          <ul>
+            <li>Catálogo de productos.</li>
+            <li>Categorías.</li>
+            <li>Buscador.</li>
+            <li>Filtros.</li>
+            <li>Carrito de compras.</li>
+            <li>Checkout (proceso de pago).</li>
+            <li>Métodos de pago.</li>
+            <li>Gestión de pedidos.</li>
+            <li>Cuenta de usuario.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROYECTOS ============ -->
+  <section class="section" id="proyectos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="tag">Proyectos</div>
+        <h2 class="section-title">Trabajo en construcción</h2>
+        <p class="section-desc">TOKION está en beta. Estos son los tipos de proyecto en los que estamos trabajando ahora
+          mismo.</p>
+      </div>
+      <div class="projects-grid reveal">
+        <div class="project-card">
+          <div class="project-thumb">
+            <svg viewBox="0 0 100 100" fill="none">
+              <path d="M50 30 L88 55 L64 68 L50 58 L36 68 L12 55 Z" fill="var(--red)" />
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="project-status">En desarrollo</span>
+            <h4>Plataformas E-commerce</h4>
+            <p>Tiendas online a medida con panel de gestión propio.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-thumb">
+            <svg viewBox="0 0 100 100" fill="none">
+              <path d="M50 30 L88 55 L64 68 L50 58 L36 68 L12 55 Z" fill="var(--red)" />
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="project-status">En desarrollo</span>
+            <h4>Landing Pages</h4>
+            <p>Paginas para que conozcan tu marca.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-thumb">
+            <svg viewBox="0 0 100 100" fill="none">
+              <path d="M50 30 L88 55 L64 68 L50 58 L36 68 L12 55 Z" fill="var(--red)" />
+            </svg>
+          </div>
+          <div class="project-body">
+            <span class="project-status">En desarrollo</span>
+            <h4>Sitios Corporativos</h4>
+            <p>Presencia web institucional para tu empresa.</p>
+          </div>
+        </div>
+      </div>
+      <div class="projects-note reveal">
+        <span class="dot"></span>
+        Estamos armando nuestro portfolio con los primeros proyectos reales. Pronto vas a poder verlos acá.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOSOTROS ============ -->
+  <section class="section" id="nosotros">
+    <div class="wrap about-grid">
+      <div class="about-photo reveal">
+        <div class="cap"><img src="/GAP Photo web.jpg" alt="" srcset=""></div>
+      </div>
+      <div class="about-copy reveal">
+        <div class="tag">Sobre nosotros</div>
+        <p class="lead"><span class="no">No vendemos páginas web.</span><br>Creamos herramientas que ayudan a las
+          empresas a crecer.</p>
+        <p>Nuestra prioridad es desarrollar <strong>software rápido, seguro y preparado para el futuro</strong>. Cada
+          proyecto empieza entendiendo el problema real del negocio, no copiando una plantilla.</p>
+        <p>Trabajamos como un equipo chico y directo: sin intermediarios, con comunicación clara en cada etapa del
+          proceso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESO ============ -->
+  <section class="section" id="proceso">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="tag">Proceso</div>
+        <h2 class="section-title">Cómo trabajamos</h2>
+        <p class="section-desc">Cinco etapas, siempre en el mismo orden, para que sepas exactamente en qué parte del
+          camino está tu proyecto.</p>
+      </div>
+      <div class="process-list reveal">
+        <div class="process-item">
+          <span class="pnum">01</span>
+          <div class="pbody">
+            <h4>Reunión</h4>
+            <p>Escuchamos qué necesita tu negocio y definimos el alcance real del proyecto.</p>
+          </div>
+        </div>
+        <div class="process-connector">↓</div>
+        <div class="process-item">
+          <span class="pnum">02</span>
+          <div class="pbody">
+            <h4>Diseño</h4>
+            <p>Armamos la estructura y la identidad visual antes de escribir una sola línea de código.</p>
+          </div>
+        </div>
+        <div class="process-connector">↓</div>
+        <div class="process-item">
+          <span class="pnum">03</span>
+          <div class="pbody">
+            <h4>Desarrollo</h4>
+            <p>Construimos el sistema con actualizaciones frecuentes para que veas el avance real.</p>
+          </div>
+        </div>
+        <div class="process-connector">↓</div>
+        <div class="process-item">
+          <span class="pnum">04</span>
+          <div class="pbody">
+            <h4>Testing</h4>
+            <p>Probamos a fondo antes de que cualquier usuario lo vea: funcionalidad, velocidad y seguridad.</p>
+          </div>
+        </div>
+        <div class="process-connector">↓</div>
+        <div class="process-item">
+          <span class="pnum">05</span>
+          <div class="pbody">
+            <h4>Lanzamiento</h4>
+            <p>Publicamos, monitoreamos y te acompañamos en las primeras semanas en producción.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL / CONTACTO ============ -->
+  <section class="cta-final" id="contacto">
+    <div class="wrap">
+      <div class="tag reveal">Contacto</div>
+      <h2 class="reveal">¿TENÉS UNA IDEA?<br>NOSOTROS LA TRAEMOS A LA <span class="idea">REALIDAD.</span></h2>
+      <a href="/formulario.html" class="btn-primary notch-sm reveal">EMPEZAR PROYECTO →</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/logo.png" class="logo" alt="TOKION">
+          <div>
+            <span class="fname">TOKION</span>
+            <span class="ftag">Desarrollo Web & Software</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Sitio</h5>
+            <a href="#servicios">Servicios</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#proceso">Proceso</a>
+          </div>
+          <div class="footer-col">
+            <h5>Contacto</h5>
+            <a href="mailto:tokion.kode@gmail.com">tokion.kode@gmail.com</a>
+            <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <div class="footer-col">
+            <h5>Redes</h5>
+            <a href="#" target="_blank" rel="noopener">Instagram</a>
+            <a href="#" target="_blank" rel="noopener">Tik Tok</a>
+            <a href="#" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 TOKION. Todos los derechos reservados.</span>
+        <span>Hecho a tu medida.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/tokion_scripts.js"></script>
+
+</body>
+
+<script>
+  const parametros = new URLSearchParams(window.location.search);
+
+  if (parametros.get("enviado") === "1") {
+
+    const mensaje = document.getElementById("mensajeExito");
+
+    if (mensaje) {
+      mensaje.classList.add("mostrar");
+
+      setTimeout(() => {
+        mensaje.classList.remove("mostrar");
+      }, 5000);
+    }
+
+    window.history.replaceState(
+      {},
+      document.title,
+      window.location.pathname
+    );
+  }
+</script>
+
+</html>

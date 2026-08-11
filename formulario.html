@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tokion_style.css">
+    <link rel="stylesheet" href="form.css">
+    <title>Contacto - TOKION</title>
+</head>
+
+<body>
+
+    <main class="contacto-contenedor">
+        <h1>Contáctanos</h1>
+        <p>Rellena el siguiente formulario para que podamos comunicarnos contigo.</p>
+
+        <form id="formularioContacto"
+            action="https://script.google.com/macros/s/AKfycbycjWW4CE5iLeeq1DcBztVi3tafc8Rmv3GSxk_44eSNu6orYYz1-OrRCar7utgewZdKFQ/exec"
+            method="POST">
+
+            <div class="campo">
+                <label for="nombre">Nombre y apellido</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej. +54 0123 456 789" required>
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+            </div>
+
+            <div class="campo">
+                <label for="proyecto">Sobre tu proyecto</label>
+                <textarea id="proyecto" name="proyecto" placeholder="Cuéntanos brevemente de qué se trata tu proyecto"
+                    required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="tipo">Tipo de proyecto</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="ecommerce">E-commerce</option>
+                    <option value="landing">Landing page</option>
+                    <option value="corporativa">Página corporativa</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="presupuesto">Presupuesto aproximado</label>
+                <input type="text" id="presupuesto" name="presupuesto" placeholder="En USD o ARS" required>
+            </div>
+
+            <button type="submit" class="boton-enviar">
+                Enviar
+            </button>
+
+        </form>
+
+        <script>
+            const formulario = document.getElementById("formularioContacto");
+
+            formulario.addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                const boton = formulario.querySelector(".boton-enviar");
+
+                boton.disabled = true;
+                boton.textContent = "Enviando...";
+
+                try {
+                    const respuesta = await fetch(formulario.action, {
+                        method: "POST",
+                        body: new FormData(formulario)
+                    });
+
+                    if (respuesta.ok) {
+                        window.location.href = "index.html?enviado=1";
+                    } else {
+                        throw new Error("Error al enviar");
+                    }
+
+                } catch (error) {
+                    alert("Ocurrió un error al enviar el formulario. Inténtalo nuevamente.");
+
+                    boton.disabled = false;
+                    boton.textContent = "Enviar";
+                }
+            });
+        </script>
+
+
+    </main>
+
+</body>
+
+</html>

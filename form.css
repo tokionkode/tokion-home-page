@@ -1,0 +1,131 @@
+:root {
+    --form-bg: rgba(22, 22, 25, 0.96);
+    --form-panel: #111114;
+    --form-border: rgba(242, 241, 238, 0.12);
+    --form-field: #1d1d21;
+    --form-field-border: rgba(242, 241, 238, 0.12);
+    --form-text: #f2f1ee;
+    --form-text-muted: #8c8b8e;
+    --form-accent: #e4130c;
+    --form-radius: 18px;
+    --form-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+}
+
+body {
+    background: var(--bg-void);
+    color: var(--ink);
+}
+
+.contacto-contenedor {
+    max-width: 650px;
+    margin: 100px auto 60px;
+    padding: 36px;
+    background: var(--form-bg);
+    border: 1px solid var(--form-border);
+    border-radius: var(--form-radius);
+    box-shadow: var(--form-shadow);
+}
+
+.contacto-contenedor h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(32px, 4vw, 44px);
+    margin-bottom: 12px;
+    color: var(--ink);
+}
+
+.contacto-contenedor p {
+    color: var(--ink-dim);
+    margin-bottom: 32px;
+    line-height: 1.75;
+}
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1px solid var(--form-field-border);
+    border-radius: 14px;
+    background: var(--form-field);
+    color: var(--form-text);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+    outline: none;
+    border-color: var(--form-accent);
+    box-shadow: 0 0 0 4px rgba(228, 19, 12, 0.12);
+}
+
+.campo textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.campo select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%),
+        linear-gradient(135deg, var(--ink) 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 44px;
+}
+
+.boton-enviar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: var(--red);
+    color: #0a0a0b;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: transform .2s ease, background .25s ease;
+}
+
+.boton-enviar:hover {
+    background: #ff261d;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 760px) {
+    .contacto-contenedor {
+        margin: 60px 18px 40px;
+        padding: 28px;
+    }
+
+    .campo input,
+    .campo textarea,
+    .campo select {
+        font-size: 14px;
+    }
+
+    .boton-enviar {
+        width: 100%;
+    }
+}
